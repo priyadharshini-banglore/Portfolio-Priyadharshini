@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priya | AI Builder & Full-Stack Developer</title>
+    <meta name="description" content="GenZ AI Builder & Full-Stack Developer creating next-generation neural command centers, healthcare AI assistants, and enterprise web applications.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome / Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-cyan">
+    <!-- Ambient Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+
+    <!-- Navigation Bar -->
+    <header class="navbar-wrapper">
+        <nav class="navbar glass-card">
+            <a href="#home" class="brand-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text" id="brand-name">Priya.ai</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#resume-modal" class="nav-link" id="nav-resume-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="status-badge" title="Available for hire & collaboration">
+                    <span class="status-dot"></span>
+                    <span class="status-text" id="header-status">Open for Opportunities</span>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-glow-blob blob-1"></div>
+            <div class="hero-glow-blob blob-2"></div>
+            
+            <div class="hero-content reveal">
+                <div class="hero-badge">
+                    <span class="wave-emoji">👋</span> <span class="hello-world-text">HELLO, WORLD!</span>
+                </div>
+
+                <h1 class="hero-greeting fade-in-up delay-1">
+                    Hi, I’m <span class="gradient-text hero-name-purple">Priyadharshini</span>
+                </h1>
+
+                <h2 class="hero-headline fade-in-up delay-1">
+                    I build <span class="typing-container"><span id="typing-text" class="typing-cyan">futuristic experiences</span><span class="cursor">&nbsp;</span></span>
+                </h2>
+
+                <p class="hero-role-subtitle fade-in-up delay-2" id="hero-role-title">
+                    B.E. CSE Student @ KIT | AI/ML Intern @ GTN Info Solutions | Full Stack Developer | 1,300+ Problems Solved
+                </p>
+
+                <p class="hero-tagline fade-in-up delay-2" id="hero-tagline">
+                    🚀 Always building something cool
+                </p>
+
+                <div class="hero-buttons fade-in-up delay-3">
+                    <div class="hero-btn-row">
+                        <a href="#projects" class="btn btn-purple-pill">
+                            <span>See My Work</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#about" class="btn btn-dark-pill">
+                            <span>About Me</span>
+                        </a>
+                    </div>
+                    <div class="hero-btn-row mt-sm">
+                        <a href="Priyadharshini_Resume.pdf" class="btn btn-cyan-pill" download="Priyadharshini_Resume.pdf" id="resume-btn">
+                            <span>Download Resume</span>
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Stats Grid -->
+                <div class="hero-stats-grid fade-in-up delay-4" id="stats-container">
+                    <!-- Dynamic stats loaded via JS -->
+                </div>
+            </div>
+
+            <div class="hero-visual reveal reveal-right reveal-delay-2">
+                <div class="profile-card-container">
+                    <!-- Clean Professional Frame with Profile Picture -->
+                    <div class="profile-frame glass-card" id="profile-frame">
+                        <img src="profile.png" alt="Priyadharshini M - AI &amp; Full Stack Developer" class="profile-img" id="main-profile-pic" onerror="this.src='profile2.png';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-header reveal">
+                <span class="section-tag">WHO I AM</span>
+                <h2 class="section-title">My Journey &amp; <span class="gradient-text">Philosophy</span></h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-bio glass-card reveal reveal-left">
+                    <h3 class="bio-headline" id="bio-headline">I don't just learn technologies — I build with them.</h3>
+                    <p class="bio-desc" id="bio-description">
+                        Loading bio details...
+                    </p>
+                    <div class="bio-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-code"></i>
+                            <div>
+                                <h4>Full-Stack Mastery</h4>
+                                <p>End-to-end architectures from high-concurrency Node/Django backends to responsive glassmorphic interfaces.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-brain"></i>
+                            <div>
+                                <h4>AI & LLM Integration</h4>
+                                <p>Deep experience with Groq APIs, voice-first multilingual NLP pipelines, and autonomous agent orchestration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-timeline reveal reveal-right" id="journey-container">
+                    <!-- Dynamic journey steps populated from data.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="section-header reveal">
+                <span class="section-tag">TECHNICAL ARSENAL</span>
+                <h2 class="section-title">Skills &amp; <span class="gradient-text">Expertise</span></h2>
+            </div>
+
+            <div class="skills-filter reveal reveal-delay-1">
+                <button class="filter-btn active" data-filter="all">All Skills</button>
+                <button class="filter-btn" data-filter="ai">🤖 AI &amp; ML</button>
+                <button class="filter-btn" data-filter="web">🌐 Full Stack</button>
+                <button class="filter-btn" data-filter="cloud">☁️ Cloud &amp; DB</button>
+                <button class="filter-btn" data-filter="core">⚙️ Core CS</button>
+            </div>
+
+            <div class="skills-grid reveal reveal-delay-2" id="skills-container">
+                <!-- Skills populated via JS -->
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-header reveal">
+                <span class="section-tag">WHAT I'VE BUILT</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">Real-world AI systems, high-speed SaaS command centers, and analytical engines.</p>
+            </div>
+
+            <div class="projects-filter reveal reveal-delay-1">
+                <button class="project-filter-btn active" data-pfilter="all">All Projects</button>
+                <button class="project-filter-btn" data-pfilter="mern">MERN Stack</button>
+                <button class="project-filter-btn" data-pfilter="fullstack">Django Full-Stack</button>
+            </div>
+
+            <div class="projects-grid reveal reveal-delay-2" id="projects-container">
+                <!-- Projects dynamically loaded from data.js -->
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section achievements-section">
+            <div class="section-header reveal">
+                <span class="section-tag">MILESTONES &amp; CREDENTIALS</span>
+                <h2 class="section-title">Achievements &amp; <span class="gradient-text">Certifications</span></h2>
+            </div>
+
+            <!-- Coding Platforms Grid -->
+            <h3 class="subsection-title reveal"><i class="fa-solid fa-trophy"></i> Coding Platforms &amp; Competitive Profile</h3>
+            <div class="coding-platforms-grid reveal reveal-delay-1" id="platforms-container">
+                <!-- Loaded via JS -->
+            </div>
+
+            <!-- Hackathons Grid -->
+            <h3 class="subsection-title mt-xl reveal"><i class="fa-solid fa-medal"></i> Hackathons &amp; Honors</h3>
+            <div class="hackathons-grid reveal reveal-delay-1" id="hackathons-container">
+                <!-- Loaded via JS -->
+            </div>
+
+            <!-- Certifications Grid -->
+            <h3 class="subsection-title mt-xl reveal"><i class="fa-solid fa-certificate"></i> Verified Certifications</h3>
+            <div class="certifications-grid reveal reveal-delay-1" id="certifications-container">
+                <!-- Loaded via JS -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="contact-card glass-card reveal">
+                <div class="contact-info">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h2 class="section-title">Ready to build something <span class="gradient-text">amazing?</span></h2>
+                    <p class="contact-desc">
+                        I'm always open to discussing new engineering challenges, creative startup ideas, or opportunities to be a key part of your technical vision.
+                    </p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:priya.dev.contact@gmail.com" class="contact-link-card" id="email-link">
+                            <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span>Direct Email</span>
+                                <h4 id="email-display">priya.dev.contact@gmail.com</h4>
+                            </div>
+                        </a>
+
+                        <div class="social-links-grid" id="social-container">
+                            <a href="#" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="social-btn" title="Codolio"><i class="fa-solid fa-code"></i></a>
+                            <a href="#" class="social-btn" title="LeetCode"><i class="fa-solid fa-terminal"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form" onsubmit="return false;">
+                        <h3>Send a Direct Message</h3>
+                        <div class="form-group">
+                            <label for="sender-name">Your Name</label>
+                            <input type="text" id="sender-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sender-email">Email Address</label>
+                            <input type="email" id="sender-email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sender-project">Project / Opportunity Type</label>
+                            <select id="sender-project">
+                                <option value="AI / ML System">AI / Machine Learning System</option>
+                                <option value="Full Stack Web App">Full Stack Web Application</option>
+                                <option value="Job Opportunity">Job / Internship Opportunity</option>
+                                <option value="Hackathon / Collaboration">Hackathon Collaboration</option>
+                                <option value="Other Inquiry">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="sender-message">Message Details</label>
+                            <textarea id="sender-message" rows="4" placeholder="Hi Priya, let's build something incredible together..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Built with <span class="heart">💙</span>, <span class="coffee">☕</span>, and state-of-the-art web craftsmanship.</p>
+            <p class="copyright">© 2026 <span id="footer-name">Priya</span>. All rights reserved. Inspired by Diya Vinod.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODALS -->
+
+    <!-- Project Live Preview & Details Modal -->
+    <div class="modal-overlay" id="preview-modal">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="close-preview">&times;</button>
+            <div class="modal-header">
+                <span class="modal-badge" id="modal-project-badge">AI Architecture</span>
+                <h3 id="modal-project-title">Project Title</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-simulation">
+                    <div class="simulation-topbar">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="simulation-url" id="modal-project-url">https://priya-ai-system.onrender.com</span>
+                    </div>
+                    <div class="simulation-screen" id="modal-simulation-screen">
+                        <!-- Simulated interactive preview render -->
+                        <div class="sim-loader">
+                            <i class="fa-solid fa-circle-notch fa-spin"></i>
+                            <span>Initializing Neural Interface Simulation...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-details mt-md">
+                    <h4>Technical Architecture & Impact</h4>
+                    <p id="modal-project-desc">Project comprehensive breakdown...</p>
+                    <div class="modal-tags" id="modal-project-tags"></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" id="modal-live-btn" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-rocket"></i> Launch Full Demo
+                </a>
+                <a href="#" class="btn btn-outline" id="modal-github-btn" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Source Code
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Modal -->
+    <div class="modal-overlay" id="resume-modal">
+        <div class="modal-content glass-card resume-card">
+            <button class="modal-close" id="close-resume">&times;</button>
+            <div class="resume-header">
+                <h3><i class="fa-solid fa-file-invoice"></i> Priya - Interactive Resume Sheet</h3>
+                <a href="Priyadharshini_Resume.pdf" class="btn btn-primary btn-sm" download="Priyadharshini_Resume.pdf">
+                    <i class="fa-solid fa-download"></i> Download PDF
+                </a>
+            </div>
+            <div class="resume-preview-sheet">
+                <h2>Priyadharshini M</h2>
+                <p class="resume-subtitle">B.E. Computer Science (3rd Year @ KIT) | AI/ML Intern | Full-Stack Developer</p>
+                <hr>
+                <div class="resume-section">
+                    <h4>💼 Education</h4>
+                    <p><strong>B.E. Computer Science (2024–2028):</strong> KIT – Kalaignar Karunanidhi Institute of Technology (CGPA: 8.45 / 10.0)</p>
+                    <p style="font-size: 0.85rem; color: #475569; margin-top: 4px;"><strong>Coursework:</strong> Data Structures, OOP, Computer Architecture, Computer Networks, Operating Systems</p>
+                </div>
+                <div class="resume-section">
+                    <h4>💼 Work Experience</h4>
+                    <p><strong>AI/ML Intern (May 2026–Present):</strong> GTN Info Solutions</p>
+                    <ul style="padding-left: 20px; font-size: 0.85rem; color: #475569; line-height: 1.6; margin-top: 6px;">
+                        <li>Developed AI-enabled software projects end-to-end — covering requirement planning, model building, and training, through to deployment on production environments and post-launch stakeholder review.</li>
+                        <li>Collaborated with cross-functional teams to translate business requirements into technical specifications, ensuring solutions aligned with both HR objectives and company goals.</li>
+                        <li>Presented project solutions, live demos, and detailed technical reports to HR and business stakeholders, incorporating feedback into iterative improvements.</li>
+                    </ul>
+                </div>
+                <div class="resume-section">
+                    <h4>🚀 Featured Projects (MERN & Django)</h4>
+                    <p><strong>Online Food Waste Tracker (MERN Stack):</strong> AI-powered restaurant management system with smart menu recommendations & ordering workflows.</p>
+                    <p><strong>Doctor–Patient Management System (MERN + Django):</strong> Role-based access, appointment scheduling, and secure medical record management.</p>
+                </div>
+                <div class="resume-section">
+                    <h4>🏆 Competitive Programming & Hackathons</h4>
+                    <p>• <strong>1,300+ Problems Solved:</strong> CodeChef 1★ (Rating 1274, 844 problems) | LeetCode (550+ problems, Top 38.44%, 200-day streak)</p>
+                    <p>• <strong>TNIMPACT HACKATHON 2026:</strong> Secured 2nd Prize (₹75,000) among 700+ competing teams.</p>
+                    <p>• <strong>Certifications:</strong> AWS Cloud Practitioner, IBM AI Fundamentals, Cisco Python Essentials, Google Python, Simplilearn C.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-content glass-card success-card text-center">
+            <div class="success-icon"><i class="fa-solid fa-check-circle"></i></div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out! Your message has been routed directly to Priya's notification pipeline. Expect a quick response soon.</p>
+            <button class="btn btn-primary mt-md" id="close-success">Got It 👍</button>
+        </div>
+    </div>
+
+    <!-- Data Configuration & Main Script -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

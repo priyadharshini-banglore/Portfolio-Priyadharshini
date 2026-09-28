@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyadharshini M | 3D Comic Book Developer Portfolio</title>
+    <meta name="description" content="Priyadharshini M - Full-Stack Developer & AI/ML Systems Engineer Portfolio. A high-energy, 3D interactive Sunday comic book experience showcasing AI systems, MERN & Django applications, 1,400+ solved problems, and award-winning hackathons.">
+    
+    <!-- Google Fonts: Bricolage Grotesque (Comic Display) & Plus Jakarta Sans (Clean Graphic Precision) & Bangers (Comic Impact) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 Icons & Material Symbols -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    
+    <!-- Custom Comic Book 3D Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="comic-page-body">
+
+    <!-- Comic Halftone & Particle FX Layer -->
+    <div class="comic-texture-overlay pointer-events-none"></div>
+    <canvas id="comic-particle-canvas"></canvas>
+
+    <!-- Reading Progress Bar -->
+    <div id="comic-scroll-progress" class="comic-scroll-progress"></div>
+
+    <!-- ========================================== -->
+    <!-- COMIC TOP HEADER NAVIGATION                -->
+    <!-- ========================================== -->
+    <header class="comic-navbar-wrapper">
+        <div class="comic-navbar-container">
+            <!-- Navigation Links -->
+            <nav class="comic-nav-menu" id="comic-nav-menu">
+                <a href="#hero" class="comic-nav-link active" data-nav="hero">Origin</a>
+                <a href="#about" class="comic-nav-link" data-nav="about">Story</a>
+                <a href="#skills" class="comic-nav-link" data-nav="skills">Arsenal</a>
+                <a href="#projects" class="comic-nav-link" data-nav="projects">Missions</a>
+                <a href="#achievements" class="comic-nav-link" data-nav="achievements">Trophies</a>
+                <a href="#resume" class="comic-nav-link" id="nav-resume-btn">Resume</a>
+                <a href="#contact" class="comic-nav-link" data-nav="contact">Dispatch</a>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="comic-nav-actions">
+                <a href="#contact" class="comic-btn btn-secondary btn-nav-say-hello hidden sm:inline-flex">
+                    <span>Say Hello!</span>
+                    <span class="action-emoji">👋</span>
+                </a>
+                <button class="comic-mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle comic menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- MAIN COMIC BOOK PAGES CANVAS               -->
+    <!-- ========================================== -->
+    <main class="comic-book-canvas">
+
+        <!-- ========================================== -->
+        <!-- SECTION 1: HERO - THE ORIGIN STORY         -->
+        <!-- ========================================== -->
+        <section id="hero" class="comic-section hero-section live-comic-panel" data-comic-section="hero">
+            <div class="comic-sound-fx fx-zap top-left-fx">POW!</div>
+            <div class="comic-sound-fx fx-bam bottom-right-fx">ZAP!</div>
+
+            <div class="comic-container grid-hero-layout">
+                <!-- Left Story Column: Character Intro & Action -->
+                <div class="hero-left-column">
+                    <!-- 1. Signature Hero Introduction: "Hi, I'm PRIYADHARSHINI" -->
+                    <div class="hero-name-row comic-seq-element" data-seq-order="1">
+                        <div class="comic-hi-im-callout">
+                            <span class="hi-wave-icon">👋</span>
+                            <span class="hi-text">Hi, I'm</span>
+                        </div>
+                        <div class="paint-stroke-master-container" id="paint-stroke-master">
+                            <div class="paint-stroke-wrapper" id="paint-stroke-wrapper">
+                                <svg class="paint-stroke-svg" viewBox="0 0 720 120" preserveAspectRatio="none" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="wetPaintGradHero" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#FACC15"/>
+                                            <stop offset="35%" stop-color="#FDE047"/>
+                                            <stop offset="70%" stop-color="#FACC15"/>
+                                            <stop offset="100%" stop-color="#EAB308"/>
+                                        </linearGradient>
+                                        <filter id="paintPaperShadowHero" x="-10%" y="-10%" width="130%" height="130%">
+                                            <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#18181B" flood-opacity="1"/>
+                                        </filter>
+                                        <clipPath id="paintRevealClipHero">
+                                            <rect id="paint-brush-reveal-rect-hero" x="0" y="0" width="0" height="130"/>
+                                        </clipPath>
+                                    </defs>
+                                    <g clip-path="url(#paintRevealClipHero)">
+                                        <path class="paint-path-base" d="M12,42 C45,28 95,34 145,26 C205,16 270,22 340,18 C415,14 495,24 570,16 C635,8 680,22 705,28 C715,30 718,55 708,70 C685,88 640,82 590,90 C510,98 435,86 360,94 C280,102 205,90 130,96 C75,100 35,85 10,68 C4,56 6,46 12,42 Z" fill="url(#wetPaintGradHero)" stroke="#18181B" stroke-width="3.5" filter="url(#paintPaperShadowHero)"/>
+                                        <path d="M25,36 C110,28 200,26 290,22 C390,18 490,26 590,20 C645,18 685,28 700,36" fill="none" stroke="#FEF08A" stroke-width="4.5" stroke-linecap="round" opacity="0.85"/>
+                                        <path d="M20,52 C120,46 220,48 325,42 C430,38 540,44 650,38 C685,42 700,48 705,54" fill="none" stroke="#CA8A04" stroke-width="2.5" opacity="0.35"/>
+                                        <path d="M30,76 C135,72 245,78 350,74 C460,70 570,76 675,68" fill="none" stroke="#CA8A04" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+                                        <path d="M18,62 C85,60 170,64 255,58 C340,56 425,62 510,58 C595,56 675,60 702,62" fill="none" stroke="#FEF08A" stroke-width="2.5" opacity="0.7"/>
+                                        <circle cx="8" cy="22" r="3.5" fill="#FACC15" stroke="#18181B" stroke-width="1.5"/>
+                                        <circle cx="35" cy="12" r="2.5" fill="#FACC15" stroke="#18181B" stroke-width="1"/>
+                                        <circle cx="190" cy="8" r="3" fill="#FACC15" stroke="#18181B" stroke-width="1.5"/>
+                                        <circle cx="370" cy="6" r="2" fill="#FACC15" stroke="#18181B" stroke-width="1"/>
+                                        <circle cx="560" cy="5" r="3.5" fill="#FACC15" stroke="#18181B" stroke-width="1.5"/>
+                                        <circle cx="708" cy="18" r="4" fill="#FACC15" stroke="#18181B" stroke-width="1.5"/>
+                                        <circle cx="712" cy="84" r="3" fill="#FACC15" stroke="#18181B" stroke-width="1.5"/>
+                                        <circle cx="650" cy="102" r="3.5" fill="#FACC15" stroke="#18181B" stroke-width="1.5"/>
+                                        <circle cx="450" cy="106" r="2.5" fill="#FACC15" stroke="#18181B" stroke-width="1"/>
+                                        <circle cx="260" cy="108" r="4" fill="#FACC15" stroke="#18181B" stroke-width="1.5"/>
+                                        <circle cx="75" cy="106" r="3" fill="#FACC15" stroke="#18181B" stroke-width="1.5"/>
+                                    </g>
+                                    <g id="paint-brush-head-hero" class="paint-brush-head-group" transform="translate(0, 0)">
+                                        <path d="M-12,12 C-4,18 0,38 -2,62 C-4,86 -10,102 -16,108 C-2,98 8,78 10,58 C12,38 5,18 -12,12 Z" fill="#FDE047" stroke="#18181B" stroke-width="2.5"/>
+                                        <circle cx="0" cy="55" r="4.5" fill="#FB923C" opacity="0.85"/>
+                                    </g>
+                                </svg>
+                                <div class="paint-letters-deck" id="paint-letters-deck-hero">
+                                    <span class="paint-letter-item" data-index="0">P</span>
+                                    <span class="paint-letter-item" data-index="1">R</span>
+                                    <span class="paint-letter-item" data-index="2">I</span>
+                                    <span class="paint-letter-item" data-index="3">Y</span>
+                                    <span class="paint-letter-item" data-index="4">A</span>
+                                    <span class="paint-letter-item" data-index="5">D</span>
+                                    <span class="paint-letter-item" data-index="6">H</span>
+                                    <span class="paint-letter-item" data-index="7">A</span>
+                                    <span class="paint-letter-item" data-index="8">R</span>
+                                    <span class="paint-letter-item" data-index="9">S</span>
+                                    <span class="paint-letter-item" data-index="10">H</span>
+                                    <span class="paint-letter-item" data-index="11">I</span>
+                                    <span class="paint-letter-item" data-index="12">N</span>
+                                    <span class="paint-letter-item" data-index="13">I</span>
+                                </div>
+                                <div class="comic-title-boom-badge" id="comic-title-boom-hero">BOOM!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Dynamic Kinetic Typing Subheader -->
+                    <div class="hero-character-intro comic-seq-element" data-seq-order="3" id="hero-name-block">
+                        <div class="hero-typing-strip">
+                            <span class="typing-prefix">I build &amp; engineer</span>
+                            <span class="typing-badge-box">
+                                <span id="typing-text" class="typing-target">Intelligent AI Systems</span>
+                                <span class="typing-cursor">|</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Role & Identity Subtitle -->
+                    <p class="hero-lead-text comic-seq-element" data-seq-order="4" id="hero-role-title">
+                        <strong>B.E. CSE Student @ KIT</strong> • Full Stack Developer • AI/ML Engineer • <span class="comic-stat-pill">1,400+ Problems Solved</span>
+                    </p>
+
+                    <!-- 4. Comic Speech Bubble Quote -->
+                    <div class="comic-speech-bubble bubble-left comic-seq-element" data-seq-order="5" id="hero-quote-bubble">
+                        <div class="speech-tail"></div>
+                        <div class="bubble-content">
+                            <span class="bubble-icon">🚀</span>
+                            <p class="bubble-text">
+                                "I don't just learn technologies — I build real-world, high-impact systems!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 5. 3D Cartoon Action Buttons -->
+                    <div class="hero-actions-row comic-seq-element" data-seq-order="6" id="hero-actions-deck">
+                        <a href="#projects" class="comic-btn btn-primary btn-3d-lift">
+                            <span>See Missions</span>
+                            <span class="btn-icon-burst">💥</span>
+                        </a>
+                        <a href="#about" class="comic-btn btn-surface btn-3d-lift">
+                            <span>Origin Story</span>
+                            <span class="btn-icon-burst">📖</span>
+                        </a>
+                        <button class="comic-btn btn-accent btn-3d-lift" id="hero-resume-trigger">
+                            <span>View Resume</span>
+                            <span class="btn-icon-burst">⚡</span>
+                        </button>
+                    </div>
+
+                    <!-- 6. 4 Collectible Stat Burst Boxes -->
+                    <div class="hero-stats-deck comic-seq-element" data-seq-order="7" id="hero-stats-deck">
+                        <!-- Loaded dynamically via JS -->
+                    </div>
+                </div>
+
+                <!-- Right Column: 3D Comic Hero Character Frame -->
+                <div class="hero-right-column comic-seq-element" data-seq-order="8">
+                    <div class="character-card-3d-wrap" id="hero-character-card">
+                        <div class="card-action-starburst -z-10"></div>
+                        
+                        <!-- Physical Comic Card Frame -->
+                        <div class="character-comic-card">
+                            <div class="masking-tape-strip tape-center">ORIGIN PROFILE</div>
+
+                            <!-- Header Bar -->
+                            <div class="card-comic-header">
+                                <div class="comic-dots-traffic">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <span class="comic-tag-label">HERO CARD #001</span>
+                            </div>
+
+                            <!-- Image Frame with 3D Pop -->
+                            <div class="card-avatar-window">
+                                <img src="profile.png" alt="Priyadharshini M - AI Engineer &amp; Full Stack Developer" class="character-portrait-img" onerror="this.src='profile2.png';">
+                                
+                                <!-- Floating 3D Micro Badges -->
+                                <div class="floating-sticker sticker-top-left">🤖 AI &amp; Web Systems</div>
+                                <div class="floating-sticker sticker-bottom-right">💻 MERN &amp; Django</div>
+                                <div class="floating-sticker sticker-middle-left">⭐ CodeChef 1★</div>
+                            </div>
+
+                            <!-- Footer Spec -->
+                            <div class="card-comic-footer">
+                                <div>
+                                    <h3 class="character-name-title">Priyadharshini M</h3>
+                                    <p class="character-sub-title">KIT Coimbatore • Class of 2028</p>
+                                </div>
+                                <div class="verified-character-pill">
+                                    <span class="material-symbols-outlined text-[17px]">verified</span>
+                                    <span>Verified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 2: ABOUT - CHAPTER 01 THE JOURNEY  -->
+        <!-- ========================================== -->
+        <section id="about" class="comic-section about-section live-comic-panel" data-comic-section="about">
+            <div class="comic-container">
+                <!-- Section Title Banner with Physical Paint Stroke Underlay -->
+                <div class="comic-section-heading">
+                    <div class="section-tag-ribbon bg-yellow pop-rotate-neg1 comic-seq-element" data-seq-order="1">
+                        <span>[ CHAPTER 01 : THE JOURNEY ]</span>
+                    </div>
+                    <div class="section-paint-title-wrap comic-seq-element" data-seq-order="2">
+                        <div class="section-underlay-paint-stroke"></div>
+                        <h2 class="section-display-title live-paint-text" data-text-paint="Origin & Engineering Philosophy">
+                            Origin &amp; Engineering Philosophy
+                        </h2>
+                    </div>
+                    <p class="section-lead-summary comic-seq-element" data-seq-order="3">
+                        Transforming high-level algorithmic precision and modern full-stack architectures into tangible products that solve real problems.
+                    </p>
+                </div>
+
+                <!-- Main Dialogue Bio Card -->
+                <div class="comic-panel-box bio-master-panel comic-seq-element" data-seq-order="4">
+                    <div class="bio-panel-layout">
+                        <div class="bio-panel-narrative">
+                            <div class="comic-callout-quote bg-cyan-light">
+                                <i class="fa-solid fa-quote-left quote-mark"></i>
+                                <span class="quote-text" id="bio-headline">"I don't just learn technologies — I build real-world, high-impact systems."</span>
+                            </div>
+                            <p class="bio-long-desc" id="bio-description">
+                                I am an energetic Computer Science student and AI developer driven by curiosity and competitive rigor. Having cracked over 1,400+ data structure &amp; algorithmic puzzles across global platforms, I bring disciplined problem-solving directly into modern software engineering. My work bridges production-grade MERN web development, Django services, and practical Machine Learning applications.
+                            </p>
+
+                            <!-- Highlights Mini-Cards -->
+                            <div class="bio-pillars-grid">
+                                <div class="pillar-mini-card">
+                                    <span class="pillar-icon">🌐</span>
+                                    <div>
+                                        <h4 class="pillar-title">Full-Stack Mastery</h4>
+                                        <p class="pillar-desc">Robust MongoDB, Express, React, and Node workflows backed by Python and relational engines.</p>
+                                    </div>
+                                </div>
+                                <div class="pillar-mini-card">
+                                    <span class="pillar-icon">🤖</span>
+                                    <div>
+                                        <h4 class="pillar-title">AI &amp; LLM Integration</h4>
+                                        <p class="pillar-desc">Implementing practical ML models, smart predictive classifiers, and prompt engineering chains.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vitals & Coordinates Sheet -->
+                        <div class="bio-vitals-sidebar">
+                            <div class="vitals-header-tag">COORDINATES &amp; VITALS</div>
+                            <ul class="vitals-list">
+                                <li>
+                                    <span class="v-label">Institution:</span>
+                                    <span class="v-val">KIT, Coimbatore</span>
+                                </li>
+                                <li>
+                                    <span class="v-label">Degree:</span>
+                                    <span class="v-val">B.E. CSE (2024 - 2028)</span>
+                                </li>
+                                <li>
+                                    <span class="v-label">Academic CGPA:</span>
+                                    <span class="v-val highlight-cgpa">8.45 / 10.0</span>
+                                </li>
+                                <li>
+                                    <span class="v-label">Current Role:</span>
+                                    <span class="v-val">Full-Stack &amp; AI Developer</span>
+                                </li>
+                                <li>
+                                    <span class="v-label">Location:</span>
+                                    <span class="v-val">Tamil Nadu, India</span>
+                                </li>
+                                <li>
+                                    <span class="v-label">Active Missions:</span>
+                                    <span class="v-val">MERN, Django, AI</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comic Strip Story Progression (4 Story Panels) -->
+                <div class="comic-storyline-wrapper">
+                    <div class="storyline-header comic-seq-element" data-seq-order="5">
+                        <h3 class="storyline-title">
+                            <span>Illustrated Story Progression</span>
+                            <span class="material-symbols-outlined text-secondary">auto_stories</span>
+                        </h3>
+                    </div>
+
+                    <div class="comic-panels-grid comic-seq-element" data-seq-order="6" id="journey-container">
+                        <!-- Populated dynamically from data.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 3: SKILLS - THE POWER ARSENAL      -->
+        <!-- ========================================== -->
+        <section id="skills" class="comic-section skills-section live-comic-panel" data-comic-section="skills">
+            <div class="comic-container">
+                <!-- Section Title Banner -->
+                <div class="comic-section-heading">
+                    <div class="section-tag-ribbon bg-orange pop-rotate-1 comic-seq-element" data-seq-order="1">
+                        <span>[ INVENTORY &amp; POWERS ]</span>
+                    </div>
+                    <div class="section-paint-title-wrap comic-seq-element" data-seq-order="2">
+                        <div class="section-underlay-paint-stroke"></div>
+                        <h2 class="section-display-title live-paint-text" data-text-paint="The Technical Power Arsenal">
+                            The Technical Power Arsenal
+                        </h2>
+                    </div>
+                    <p class="section-lead-summary comic-seq-element" data-seq-order="3">
+                        Battle-tested engineering capabilities forged across production codebases, AI pipelines, and competitive hackathon marathons.
+                    </p>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="comic-filter-tabs-row comic-seq-element" data-seq-order="4" id="skill-filters">
+                    <button class="comic-filter-tab active" data-filter="all">
+                        <span>All Skills (16)</span>
+                    </button>
+                    <button class="comic-filter-tab" data-filter="languages">
+                        <span>💻 Languages</span>
+                    </button>
+                    <button class="comic-filter-tab" data-filter="frontend">
+                        <span>🎨 Frontend</span>
+                    </button>
+                    <button class="comic-filter-tab" data-filter="backend">
+                        <span>🟢 Backend &amp; DB</span>
+                    </button>
+                    <button class="comic-filter-tab" data-filter="core">
+                        <span>🤖 AI/ML &amp; Core CS</span>
+                    </button>
+                </div>
+
+                <!-- Skills Grid Deck -->
+                <div class="comic-skills-grid comic-seq-element" data-seq-order="5" id="skills-container">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 4: PROJECTS - FEATURED MISSIONS    -->
+        <!-- ========================================== -->
+        <section id="projects" class="comic-section projects-section live-comic-panel" data-comic-section="projects">
+            <div class="comic-container">
+                <!-- Section Title Banner -->
+                <div class="comic-section-heading">
+                    <div class="section-tag-ribbon bg-yellow pop-rotate-neg2 comic-seq-element" data-seq-order="1">
+                        <span>[ WHAT I'VE BUILT ]</span>
+                    </div>
+                    <div class="section-paint-title-wrap comic-seq-element" data-seq-order="2">
+                        <div class="section-underlay-paint-stroke"></div>
+                        <h2 class="section-display-title live-paint-text" data-text-paint="Featured Hero Missions & Systems">
+                            Featured Hero Missions &amp; Systems
+                        </h2>
+                    </div>
+                    <p class="section-lead-summary comic-seq-element" data-seq-order="3">
+                        Real-world software architectures designed for resilience, automated algorithmic routing, and clinical data integrity.
+                    </p>
+                </div>
+
+                <!-- Project Filter Buttons -->
+                <div class="comic-filter-tabs-row comic-seq-element" data-seq-order="4" id="project-filters">
+                    <button class="comic-filter-tab active" data-pfilter="all">All Missions (3)</button>
+                    <button class="comic-filter-tab" data-pfilter="team">👥 Team Projects</button>
+                    <button class="comic-filter-tab" data-pfilter="mern">MERN Stack</button>
+                    <button class="comic-filter-tab" data-pfilter="fullstack">Django Full-Stack</button>
+                    <button class="comic-filter-tab" data-pfilter="ai">🤖 AI &amp; Voice</button>
+                </div>
+
+                <!-- Projects Comic Cards Grid -->
+                <div class="comic-projects-grid comic-seq-element" data-seq-order="5" id="projects-container">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 5: ACHIEVEMENTS - TROPHY ROOM      -->
+        <!-- ========================================== -->
+        <section id="achievements" class="comic-section achievements-section live-comic-panel" data-comic-section="achievements">
+            <div class="comic-container">
+                <!-- Section Title Banner -->
+                <div class="comic-section-heading">
+                    <div class="section-tag-ribbon bg-cyan pop-rotate-1 comic-seq-element" data-seq-order="1">
+                        <span>[ TROPHY ROOM &amp; CREDENTIALS ]</span>
+                    </div>
+                    <div class="section-paint-title-wrap comic-seq-element" data-seq-order="2">
+                        <div class="section-underlay-paint-stroke"></div>
+                        <h2 class="section-display-title live-paint-text" data-text-paint="Hall of Achievements & Streaks">
+                            Hall of Achievements &amp; Streaks
+                        </h2>
+                    </div>
+                    <p class="section-lead-summary comic-seq-element" data-seq-order="3">
+                        A relentless track record of competitive problem-solving streaks, state-level hackathon prizes, and verified technical badges.
+                    </p>
+                </div>
+
+                <!-- Subsection 1: Competitive Coding Platforms -->
+                <div class="achievements-block comic-seq-element" data-seq-order="4">
+                    <div class="sub-heading-strip">
+                        <span class="sub-icon">⚔️</span>
+                        <h3 class="sub-title">Competitive Coding Profiles (1,400+ Problems Solved)</h3>
+                    </div>
+                    <div class="comic-bento-grid" id="platforms-container">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+
+                <!-- Subsection 2: Major Hackathons -->
+                <div class="achievements-block mt-space-xl comic-seq-element" data-seq-order="5">
+                    <div class="sub-heading-strip">
+                        <span class="sub-icon">🏆</span>
+                        <h3 class="sub-title">Major Hackathon Victories (₹85,000+ Prize Bounty)</h3>
+                    </div>
+                    <div class="comic-hackathons-grid" id="hackathons-container">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+
+                <!-- Subsection 3: Verified Certifications -->
+                <div class="achievements-block mt-space-xl comic-seq-element" data-seq-order="6">
+                    <div class="sub-heading-strip">
+                        <span class="sub-icon">📜</span>
+                        <h3 class="sub-title">Verified Certifications &amp; Badges (15 Credentials)</h3>
+                    </div>
+                    <div class="comic-certifications-grid" id="certifications-container">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- SECTION 6: CONTACT - TO BE CONTINUED       -->
+        <!-- ========================================== -->
+        <section id="contact" class="comic-section contact-section live-comic-panel" data-comic-section="contact">
+            <div class="comic-container">
+                <!-- Section Title Banner -->
+                <div class="comic-section-heading">
+                    <div class="section-tag-ribbon bg-orange pop-rotate-neg1 comic-seq-element" data-seq-order="1">
+                        <span>[ SEND DISPATCH ]</span>
+                    </div>
+                    <div class="section-paint-title-wrap comic-seq-element" data-seq-order="2">
+                        <div class="section-underlay-paint-stroke"></div>
+                        <h2 class="section-display-title live-paint-text" data-text-paint="TO BE CONTINUED... Let's Build!">
+                            TO BE CONTINUED... Let's Build!
+                        </h2>
+                    </div>
+                    <p class="section-lead-summary comic-seq-element" data-seq-order="3">
+                        Have an engineering challenge, AI startup concept, or high-impact developer role? Send an immediate comic dispatch.
+                    </p>
+                </div>
+
+                <!-- Comic Postcard Dispatch Envelope Layout -->
+                <div class="comic-panel-box postcard-envelope-panel comic-seq-element" data-seq-order="4">
+                    <!-- Postage Stamp Graphic in top right -->
+                    <div class="airmail-postage-stamp">
+                        <div class="stamp-inner-perforation">
+                            <span class="stamp-flag">🇮🇳</span>
+                            <span class="stamp-caption">AIR MAIL</span>
+                            <span class="stamp-cost">₹85.00</span>
+                        </div>
+                    </div>
+
+                    <div class="postcard-grid-layout">
+                        <!-- Left: Direct Coordinates & Social Speech Bubbles -->
+                        <div class="postcard-left-info">
+                            <div>
+                                <h3 class="postcard-heading">Direct Transmission Signals</h3>
+                                <p class="postcard-subtext">
+                                    Reach out anytime for developer discussions, project demos, or AI problem statements.
+                                </p>
+
+                                <div class="coordinates-cards-stack">
+                                    <!-- Email -->
+                                    <a href="mailto:kit28.24cs128@gmail.com" class="coordinate-item-card" id="email-link">
+                                        <div class="coord-icon-box bg-yellow">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div class="coord-details">
+                                            <span class="coord-label">Email Transmission</span>
+                                            <span class="coord-value" id="email-display">kit28.24cs128@gmail.com</span>
+                                        </div>
+                                    </a>
+
+                                    <!-- Phone -->
+                                    <a href="tel:+917708194031" class="coordinate-item-card" id="phone-link">
+                                        <div class="coord-icon-box bg-cyan">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div class="coord-details">
+                                            <span class="coord-label">Direct Line</span>
+                                            <span class="coord-value" id="phone-display">+91 7708194031</span>
+                                        </div>
+                                    </a>
+
+                                    <!-- Location -->
+                                    <div class="coordinate-item-card">
+                                        <div class="coord-icon-box bg-orange">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                        </div>
+                                        <div class="coord-details">
+                                            <span class="coord-label">Base Location</span>
+                                            <span class="coord-value" id="location-display">Tirupur / Coimbatore, Tamil Nadu</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Sticker Links -->
+                            <div class="social-sticker-section">
+                                <span class="social-label-heading">CONNECT ACROSS PLATFORMS:</span>
+                                <div class="social-bubbles-row" id="social-bubbles-row">
+                                    <a href="https://www.linkedin.com/in/priyadharshini-m-84a07031b" target="_blank" rel="noopener" class="comic-social-bubble bubble-linkedin">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                    <a href="https://github.com/priyadharshini-banglore" target="_blank" rel="noopener" class="comic-social-bubble bubble-github">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                    <a href="https://www.codechef.com/users/kit28csa128" target="_blank" rel="noopener" class="comic-social-bubble bubble-codechef">
+                                        <i class="fa-solid fa-utensils"></i>
+                                        <span>CodeChef</span>
+                                    </a>
+                                    <a href="https://leetcode.com/u/711524bcs128/" target="_blank" rel="noopener" class="comic-social-bubble bubble-leetcode">
+                                        <i class="fa-solid fa-code"></i>
+                                        <span>LeetCode</span>
+                                    </a>
+                                    <a href="https://codeforces.com/profile/kit2824cs128" target="_blank" rel="noopener" class="comic-social-bubble bubble-codeforces">
+                                        <i class="fa-solid fa-bolt"></i>
+                                        <span>Codeforces</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Comic Dispatch Form -->
+                        <div class="postcard-right-form">
+                            <h4 class="form-header-title">
+                                <span>Write a Comic Transmission</span>
+                                <span>✉️</span>
+                            </h4>
+
+                            <form id="contact-form" class="comic-dispatch-form" action="https://formsubmit.co/kit28.24cs128@gmail.com" method="POST">
+                                <!-- FormSubmit Config -->
+                                <input type="hidden" name="_subject" id="form-subject-hidden" value="New Portfolio Dispatch from Website!">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Priyadharshini M! Your message has been received and I will reply as soon as possible.">
+
+                                <div class="form-row-duo">
+                                    <div class="comic-form-group">
+                                        <label for="sender-name">YOUR NAME *</label>
+                                        <input type="text" id="sender-name" name="name" class="comic-input" placeholder="e.g. Tony Stark" required>
+                                    </div>
+                                    <div class="comic-form-group">
+                                        <label for="sender-email">YOUR EMAIL *</label>
+                                        <input type="email" id="sender-email" name="email" class="comic-input" placeholder="e.g. tony@stark.com" required>
+                                    </div>
+                                </div>
+
+                                <div class="comic-form-group">
+                                    <label for="sender-subject">MISSION TOPIC / OPPORTUNITY</label>
+                                    <select id="sender-subject" name="subject" class="comic-select">
+                                        <option value="AI / ML System Project">🤖 AI / Machine Learning Project</option>
+                                        <option value="Full Stack Web Application">🌐 Full-Stack Web Application</option>
+                                        <option value="Software Engineering / AI Opportunity">💼 Software Engineering / AI Role</option>
+                                        <option value="Hackathon Collaboration">🏆 Hackathon Sprint Collaboration</option>
+                                        <option value="General Inquiry">⚡ General Inquiry</option>
+                                    </select>
+                                </div>
+
+                                <div class="comic-form-group">
+                                    <label for="sender-message">DISPATCH MESSAGE *</label>
+                                    <textarea id="sender-message" name="message" class="comic-textarea" rows="4" placeholder="Share your project vision, challenges, or opportunity details..." required></textarea>
+                                </div>
+
+                                <button type="submit" id="submit-dispatch-btn" class="comic-btn btn-primary btn-submit-dispatch">
+                                    <span>Send Dispatch!</span>
+                                    <span class="btn-icon-burst">🚀</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================== -->
+    <!-- SECTION 7: COMIC FOOTER EPILOGUE           -->
+    <!-- ========================================== -->
+    <footer class="comic-book-footer">
+        <div class="comic-container">
+            <div class="footer-comic-box">
+                <div class="footer-main-row">
+                    <div class="footer-col-story">
+                        <div class="footer-issue-stamp">
+                            <span>Issue #24: Built with</span>
+                            <span class="heart-pulse">❤️</span>
+                            <span>&amp; copious amounts of</span>
+                            <span class="coffee-cup">☕</span>
+                        </div>
+                        <p class="footer-subtext">
+                            Handcrafted Sunday-comic UI, 3D interactive physics &amp; intelligence algorithms engineered by <strong>Priyadharshini M</strong>.
+                        </p>
+                    </div>
+
+                    <div class="footer-col-author">
+                        <div class="author-badge-card">
+                            <span class="author-label">AUTHOR</span>
+                            <span class="author-name">Priyadharshini M.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-sub-bottom-bar">
+                    <span class="footer-copyright-text">© 2026 PRIYADHARSHINI M • ALL COMIC PANELS RESERVED</span>
+                    <div class="footer-end-stamp">
+                        <span>END OF ISSUE</span>
+                        <i class="fa-solid fa-bolt text-yellow"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE 3D MODALS                      -->
+    <!-- ========================================== -->
+
+    <!-- Modal 1: Live Project Interactive Simulation Sandbox -->
+    <div class="comic-modal-overlay" id="preview-modal">
+        <div class="comic-modal-card">
+            <!-- Modal Chrome Bar -->
+            <div class="modal-chrome-bar bg-yellow">
+                <div class="modal-dots-row">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                    <span class="modal-bar-title" id="modal-project-badge">MISSION SIMULATOR</span>
+                </div>
+                <button class="modal-close-btn" id="close-preview-modal" aria-label="Close modal">✕</button>
+            </div>
+
+            <div class="modal-scroll-body">
+                <div class="modal-header-section">
+                    <h3 class="modal-proj-title" id="modal-project-title">Project Title</h3>
+                    <p class="modal-proj-url" id="modal-project-url">https://food-waste-tracker.priya-ai.app</p>
+                </div>
+
+                <!-- Simulation Sandbox Screen -->
+                <div class="simulation-screen-frame">
+                    <div class="sim-screen-header">
+                        <span class="sim-status-indicator">
+                            <span class="live-dot-pulse"></span>
+                            <span>LIVE ENGINE SANDBOX</span>
+                        </span>
+                        <span class="sim-tag-clock" id="sim-clock-display">00:00:00</span>
+                    </div>
+                    <div class="sim-screen-content" id="modal-simulation-screen">
+                        <!-- Dynamic simulated system content rendered via JS -->
+                    </div>
+                </div>
+
+                <!-- Architecture & Impact Breakdown -->
+                <div class="modal-breakdown-box">
+                    <h4 class="breakdown-title">Technical Architecture &amp; Real-World Impact</h4>
+                    <p class="breakdown-desc" id="modal-project-desc">Project details...</p>
+                    <div class="modal-tech-tags" id="modal-project-tags"></div>
+                </div>
+            </div>
+
+            <!-- Modal Action Footer -->
+            <div class="modal-action-footer">
+                <div class="footer-links-group">
+                    <a href="#" class="comic-btn btn-primary btn-sm" id="modal-live-btn" target="_blank" rel="noopener">
+                        <span>Launch Demo</span>
+                        <i class="fa-solid fa-rocket"></i>
+                    </a>
+                    <a href="#" class="comic-btn btn-surface btn-sm" id="modal-github-btn" target="_blank" rel="noopener">
+                        <span>Source Code</span>
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <button class="comic-btn btn-secondary btn-sm" id="modal-close-footer-btn">Close Sandbox</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Verified Interactive Resume Sheet -->
+    <div class="comic-modal-overlay" id="resume-modal">
+        <div class="comic-modal-card resume-modal-card">
+            <!-- Modal Chrome Bar -->
+            <div class="modal-chrome-bar bg-orange">
+                <div class="modal-dots-row">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                    <span class="modal-bar-title">Priyadharshini_M_Resume.pdf [VERIFIED ARTIFACT]</span>
+                </div>
+                <div class="modal-header-actions">
+                    <a href="Priyadharshini_Resume.pdf" download="Priyadharshini_Resume.pdf" class="comic-btn btn-surface btn-xs">
+                        <i class="fa-solid fa-download"></i>
+                        <span>PDF</span>
+                    </a>
+                    <button class="modal-close-btn" id="close-resume-modal" aria-label="Close modal">✕</button>
+                </div>
+            </div>
+
+            <div class="modal-scroll-body resume-document-canvas">
+                <!-- Resume Top Info -->
+                <div class="resume-header-row">
+                    <div>
+                        <h2 class="resume-name-title">Priyadharshini M</h2>
+                        <p class="resume-role-sub">B.E. Computer Science (KIT) | Full-Stack Developer | AI/ML Systems</p>
+                    </div>
+                    <div class="resume-contact-col">
+                        <span>📧 kit28.24cs128@gmail.com</span>
+                        <span>📱 +91 7708194031</span>
+                        <span>📍 Tirupur / Coimbatore, Tamil Nadu</span>
+                    </div>
+                </div>
+
+                <div class="comic-dashed-divider"></div>
+
+                <!-- Education -->
+                <div class="resume-section-block">
+                    <h4 class="resume-sec-title">💼 Education</h4>
+                    <p class="resume-item-main"><strong>B.E. Computer Science and Engineering (2024 – 2028)</strong></p>
+                    <p class="resume-item-sub">KIT – Kalaignar Karunanidhi Institute of Technology, Coimbatore</p>
+                    <p class="resume-metric-tag">Academic CGPA: <strong>8.45 / 10.0</strong></p>
+                    <p class="resume-coursework"><strong>Core Coursework:</strong> Data Structures, OOP, Computer Architecture, Computer Networks, Operating Systems.</p>
+                </div>
+
+                <!-- Experience -->
+                <div class="resume-section-block">
+                    <h4 class="resume-sec-title">🏢 Experience</h4>
+                    <div class="resume-xp-entry">
+                        <div class="xp-title-row">
+                            <span class="xp-role">AI/ML Intern (Completed)</span>
+                            <span class="xp-dates">May 2026</span>
+                        </div>
+                        <span class="xp-company">GTN Info Solutions</span>
+                        <ul class="xp-bullet-list">
+                            <li>Developed AI-enabled software projects end-to-end — covering requirement planning, model building, and training, through to deployment on production environments and post-launch stakeholder review.</li>
+                            <li>Collaborated with cross-functional teams to translate business requirements into technical specifications, ensuring solutions aligned with both HR objectives and broader company goals.</li>
+                            <li>Presented project solutions, live demos, and detailed technical reports to HR and business stakeholders, incorporating feedback into iterative improvements throughout the project lifecycle.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Key Built Projects -->
+                <div class="resume-section-block">
+                    <h4 class="resume-sec-title">🚀 Projects</h4>
+                    <div class="resume-proj-entry">
+                        <p><strong>1. Voice Logistic Assistant (Team Project • n8n + Gemini AI + Firebase):</strong></p>
+                        <ul class="resume-bullet-sub-list">
+                            <li>Built a conversational, hands-free voice assistant tailored for delivery and transit drivers on the road.</li>
+                            <li>Integrated n8n workflow automation with Firebase real-time database to process verbal delivery confirmations (e.g. 'mark delivered') instantly.</li>
+                            <li>Engineered dynamic route calculation and turn-by-turn map rendering triggered by voice queries ('what is the next stop?') without manual driver interaction.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-proj-entry mt-2">
+                        <p><strong>2. Online Food Waste Tracker (MERN Stack):</strong></p>
+                        <ul class="resume-bullet-sub-list">
+                            <li>Built an AI-powered restaurant management system using the MERN stack, integrating smart menu recommendations driven by customer ordering patterns to reduce food waste and boost sales.</li>
+                            <li>Engineered automated ordering workflows and a real-time analytics dashboard, giving restaurant staff data-driven insights into inventory usage and customer preferences.</li>
+                            <li>Designed a responsive, intuitive UI to streamline the ordering process end-to-end, improving overall customer experience and reducing order-processing time.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-proj-entry mt-2">
+                        <p><strong>3. Doctor–Patient Management System (MERN + Django):</strong></p>
+                        <ul class="resume-bullet-sub-list">
+                            <li>Designed and built a full-stack healthcare platform combining a MERN frontend with a Django backend, supporting role-based access for doctors, patients, and administrators.</li>
+                            <li>Implemented appointment scheduling and electronic medical record management, enabling seamless coordination between patients and healthcare providers.</li>
+                            <li>Built secure authentication and data-handling pipelines to protect sensitive patient information in compliance with standard healthcare data privacy practices.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Competitive Excellence -->
+                <div class="resume-section-block">
+                    <h4 class="resume-sec-title">🏆 Competitive Programming &amp; Hackathons</h4>
+                    <ul class="resume-bullets-clean">
+                        <li><strong>LeetCode:</strong> Max Rating 1574 | Solved 559 problems | Global Rank: 247,782 | Badges: 50-Day, 100-Day &amp; 200-Day Streak.</li>
+                        <li><strong>CodeChef:</strong> Rating: 1306 | 1★ | Solved 852 problems | Global Rank: 66,859 | Badges: Diamond (Daily Streak), Gold (Problem Solver, Contest Contender).</li>
+                        <li><strong>Codeforces:</strong> Max Rating 961.</li>
+                        <li><strong>TNIMPACT HACKATHON 2026:</strong> Secured 2nd Prize (₹75,000 Cash Prize) among 700+ competing teams.</li>
+                        <li><strong>36-Hour Hackathon:</strong> Won Most Innovative Award (₹7,000 Cash Prize).</li>
+                        <li><strong>Code-Relay Competition:</strong> Won Code-Relay Winner (₹3,000 Cash Prize) at Ramakrishna College.</li>
+                        <li><strong>CodeXtreme 24-Hr Marathon:</strong> Ranked 49th overall and 1st in CSE Department out of ~300 participants, solving 70 problems.</li>
+                        <li><strong>National Hackathons:</strong> Competed in 6+ hackathons including TNIMPACT 2026, KPR Institute (24-hr), KIT, St. Joseph's Chennai.</li>
+                    </ul>
+                </div>
+
+                <!-- Certifications -->
+                <div class="resume-section-block">
+                    <h4 class="resume-sec-title">📜 Verified Credentials</h4>
+                    <p class="resume-certs-summary">
+                        AWS Cloud Practitioner • NPTEL Java • Cisco Modern AI • Cisco Data Science • Cisco CCNA • IBM AI Fundamentals • Simplilearn C • Infosec C++ • Cisco Python Essentials 1 &amp; 2 • Google Python • Canva UI/UX Design
+                    </p>
+                </div>
+            </div>
+
+            <div class="modal-action-footer">
+                <a href="Priyadharshini_Resume.pdf" download="Priyadharshini_Resume.pdf" class="comic-btn btn-primary btn-sm">
+                    <i class="fa-solid fa-download"></i>
+                    <span>Download Official PDF</span>
+                </a>
+                <button class="comic-btn btn-secondary btn-sm" id="close-resume-bottom-btn">Close Sheet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Transmission Success Pop-up -->
+    <div class="comic-modal-overlay" id="success-modal">
+        <div class="comic-modal-card success-popup-card">
+            <div class="modal-chrome-bar bg-yellow">
+                <span class="modal-bar-title">DISPATCH TRANSMITTED</span>
+                <button class="modal-close-btn" id="close-success-modal" aria-label="Close modal">✕</button>
+            </div>
+            <div class="success-popup-body">
+                <div class="success-comic-icon-burst">
+                    <span>🚀</span>
+                </div>
+                <h3 class="success-comic-title">Transmission Dispatched!</h3>
+                <p class="success-comic-desc">
+                    Your dispatch has been successfully routed to Priyadharshini's priority communication channel. Expect a response signal shortly!
+                </p>
+                <button class="comic-btn btn-primary btn-sm mt-3" id="confirm-success-btn">
+                    <span>Awesome! 👍</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Data & Interactive Engine -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
