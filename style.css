@@ -78,6 +78,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 78px;
     font-size: 16px;
 }
 
@@ -582,14 +583,24 @@ body.comic-page-body {
    7. COMIC SECTIONS & HEADINGS (COMPACT & BALANCED)
    -------------------------------------------------------------------------- */
 .comic-section {
-    padding: 3.5rem 0;
+    min-height: calc(100vh - 78px);
+    min-height: calc(100dvh - 78px);
+    padding: 2.5rem 0;
     position: relative;
     border-top: var(--border-comic-thick);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-margin-top: 78px;
 }
 
 .comic-section:first-of-type {
     border-top: none;
-    padding-top: 6.5rem;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: calc(78px + 1.25rem) 0 1.75rem;
+    justify-content: center;
+    scroll-margin-top: 0;
 }
 
 .comic-section-heading {
@@ -1231,6 +1242,7 @@ body.comic-page-body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     display: block;
 }
 
@@ -1319,7 +1331,7 @@ body.comic-page-body {
 }
 
 .top-left-fx {
-    top: 70px;
+    top: 86px;
     left: 20px;
     color: var(--comic-orange);
     -webkit-text-stroke: 1.5px var(--ink-black);
@@ -1842,6 +1854,7 @@ body.comic-page-body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     display: block;
 }
 

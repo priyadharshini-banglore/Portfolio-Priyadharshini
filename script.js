@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             const roleEl = document.getElementById("hero-role-title");
             if (roleEl) {
-                roleEl.innerHTML = `<strong>B.E. CSE Student @ KIT</strong> • Full Stack Developer • AI/ML Engineer • <span class="comic-stat-pill">1,400+ Problems Solved</span>`;
+                roleEl.innerHTML = `<strong>B.E. CSE Student @ KIT</strong> • Full Stack Developer • AI/ML Engineer • <span class="comic-stat-pill">1,445+ Problems Solved</span>`;
             }
 
             const bioHeadlineEl = document.getElementById("bio-headline");
@@ -111,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="skill-power-meter-wrapper">
                         <div class="power-meter-header">
                             <span>POWER LEVEL</span>
-                            <span>${sk.level}%</span>
                         </div>
                         <div class="power-meter-track">
                             <div class="power-meter-fill ${fillColors[idx % fillColors.length]}" style="width: ${sk.level}%;"></div>
@@ -170,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             
                             <!-- Visual Sandbox Frame Preview -->
                             <div class="project-visual-canvas">
+                                ${proj.image ? `<img src="${proj.image}" alt="${proj.title} preview" class="project-cover-art">` : ''}
                                 <div class="visual-live-indicator">
                                     <span class="live-green-pulse"></span>
                                     <span>${isVoice ? 'Live Voice AI & n8n Engine' : (proj.liveUrl && proj.liveUrl.startsWith('http') ? 'Live Deployed App Ready' : 'Simulated Reactive Engine')}</span>
@@ -184,12 +184,19 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
 
                         <div class="project-card-action-bar">
+                            ${isFood && proj.liveUrl && proj.liveUrl.startsWith('http') ? `
+                            <a href="${proj.liveUrl}" target="_blank" rel="noopener" class="comic-btn btn-primary btn-sm" title="Open Live Website">
+                                <span>LIVE</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            ` : `
                             <button class="comic-btn btn-primary btn-sm open-sim-btn" data-pid="${proj.id}">
                                 <span>Launch Simulation</span>
                                 <span class="btn-icon-burst">🚀</span>
                             </button>
+                            `}
                             <div class="project-links-duo">
-                                ${proj.liveUrl && proj.liveUrl.startsWith('http') ? `
+                                ${!isFood && proj.liveUrl && proj.liveUrl.startsWith('http') ? `
                                 <a href="${proj.liveUrl}" target="_blank" rel="noopener" class="comic-btn btn-surface btn-xs" title="Open Live Website">
                                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     <span>Live</span>

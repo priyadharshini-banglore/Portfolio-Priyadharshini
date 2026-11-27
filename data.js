@@ -7,7 +7,7 @@ const portfolioData = {
     personal: {
         name: "Priyadharshini",
         fullName: "Priyadharshini M",
-        title: "B.E. CSE Student @ KIT | Full Stack Developer | AI/ML Engineer | 1,400+ Problems Solved",
+        title: "B.E. CSE Student @ KIT | Full Stack Developer | AI/ML Engineer | 1,445+ Problems Solved",
         taglines: [
             "MERN & Django Web Apps",
             "AI/ML Software Systems",
@@ -15,7 +15,7 @@ const portfolioData = {
             "Award-Winning Hackathons"
         ],
         bioHeadline: "I don't just learn technologies — I build real-world, high-impact systems.",
-        bioDescription: "I am a 3rd Year B.E. Computer Science Engineering student at KIT - Kalaignar Karunanidhi Institute of Technology (CGPA: 8.45/10.0). With over 1,400+ coding problems solved across CodeChef and LeetCode, and major hackathon wins including ₹75,000 2nd Prize at TNIMPACT 2026, I specialize in full-stack MERN & Django applications and AI/ML system architectures.",
+        bioDescription: "I am a 3rd Year B.E. Computer Science Engineering student at KIT - Kalaignar Karunanidhi Institute of Technology (CGPA: 8.45/10.0). With over 1,445+ coding problems solved across CodeChef and LeetCode, and major hackathon wins including ₹75,000 2nd Prize at TNIMPACT 2026, I specialize in full-stack MERN & Django applications and AI/ML system architectures.",
         status: "Available for Web & AI Projects",
         location: "Tirupur, Tamil Nadu",
         email: "kit28.24cs128@gmail.com",
@@ -29,7 +29,7 @@ const portfolioData = {
     },
 
     stats: [
-        { label: "Total Problems Solved", value: "1,410+" },
+        { label: "Total Problems Solved", value: "1,445+" },
         { label: "Hackathon Prizes Won", value: "₹85,000+" },
         { label: "Major Hackathons", value: "6+" },
         { label: "Current CGPA (@ KIT)", value: "8.45" }
@@ -37,8 +37,8 @@ const portfolioData = {
 
     journey: [
         {
-            year: "Internship Experience",
-            title: "AI/ML Intern (Completed)",
+            year: "May 2026 – Present",
+            title: "AI/ML Intern",
             subtitle: "GTN Info Solutions",
             description: "Developed AI-enabled software projects end-to-end — covering requirement planning, model building, and training, through to deployment on production environments and post-launch stakeholder review. Collaborated with cross-functional teams and presented live demos and detailed technical reports to HR and business stakeholders."
         },
@@ -50,9 +50,9 @@ const portfolioData = {
         },
         {
             year: "Competitive Excellence",
-            title: "1,410+ Problems & Daily Streak Badges",
-            subtitle: "LeetCode 1574 | CodeChef 1306 (1★) | Codeforces 961",
-            description: "Solved 559 problems on LeetCode (Max Rating 1574, Global Rank 247,782, 50/100/200-day streak badges) and 852 problems on CodeChef (Rating 1306, Rank 66,859, Diamond & Gold badges)."
+            title: "1,445+ Problems & Daily Streak Badges",
+            subtitle: "LeetCode 1644 | CodeChef 1332 (1★) | Codeforces 864",
+            description: "Solved 569 problems on LeetCode (Max Rating 1644, Global Rank 169,537, 50/100/200-day streak badges) and 876 problems on CodeChef (Rating 1332, Highest 1334, 69 Contests, Global Rank 58,960, Diamond & Gold badges)."
         },
         {
             year: "Hackathon Champion",
@@ -84,7 +84,8 @@ const portfolioData = {
         { name: "Machine Learning / AI Fundamentals", category: "core", level: 88, icon: "🤖" },
         { name: "Data Structures & Algorithms (DSA)", category: "core", level: 96, icon: "🎯" },
         { name: "Object-Oriented Programming (OOP)", category: "core", level: 94, icon: "📐" },
-        { name: "AWS Cloud & Prompt Engineering", category: "core", level: 84, icon: "☁️" }
+        { name: "AWS Cloud & Prompt Engineering", category: "core", level: 84, icon: "☁️" },
+        { name: "Git & Version Control", category: "core", level: 90, icon: "🔧" }
     ],
 
     projects: [
@@ -107,8 +108,9 @@ const portfolioData = {
             type: "Individual Project",
             category: "mern",
             badge: "Full-Stack AI Restaurant POS",
+            image: "food-waste-tracker.jpg",
             description: "Built an AI-powered restaurant management & POS platform featuring interactive 3D table ordering, Kitchen Display System (KDS), Razorpay UPI billing, smart menu recommendations, and camera-based food waste analytics.",
-            tech: ["React.js", "Node.js", "Express.js", "Vision AI", "Razorpay POS"],
+            tech: ["React.js", "TypeScript", "Node.js", "Express.js", "Gemini & Groq AI", "Three.js"],
             liveUrl: "https://ai-restaurant-management-system-32up.onrender.com",
             githubUrl: "https://github.com/priyadharshini-banglore/AI-RESTAURANT-MANAGEMENT-SYSTEM",
             featured: true,
@@ -133,28 +135,28 @@ const portfolioData = {
         {
             platform: "LeetCode",
             icon: "🏆",
-            stats: "Max Rating: 1574",
-            subtitle: "Solved 559 Problems | Global Rank: 247,782 | Badges: 50-Day, 100-Day & 200-Day Streak",
+            stats: "Max Rating: 1644",
+            subtitle: "Solved 569 Problems | Global Rank: 169,537 | Badges: 50-Day, 100-Day & 200-Day Streak",
             link: "https://leetcode.com/u/711524bcs128/"
         },
         {
             platform: "CodeChef",
             icon: "⭐",
-            stats: "Rating: 1306 | 1★",
-            subtitle: "Solved 852 Problems | Global Rank 66,859 | Badges: Diamond (Daily Streak), Gold (Problem Solver, Contest Contender)",
+            stats: "Rating: 1332 | 1★",
+            subtitle: "Highest 1334 | Solved 876 Problems | 69 Contests | Global Rank 58,960 | Badges: Diamond (Daily Streak), Gold (Problem Solver, Contest Contender)",
             link: "https://www.codechef.com/users/kit28csa128"
         },
         {
             platform: "Codeforces",
             icon: "⚡",
-            stats: "Max Rating: 961",
+            stats: "Max Rating: 864",
             subtitle: "Active Contest Problem Solving & Algorithmic Competitions",
             link: "https://codeforces.com/profile/kit2824cs128"
         },
         {
             platform: "Total Competitive Summary",
             icon: "🎯",
-            stats: "1,410+ Problems Solved",
+            stats: "1,445+ Problems Solved",
             subtitle: "Top Consistency Across CodeChef, LeetCode & Codeforces",
             link: "https://leetcode.com/u/711524bcs128/"
         }
@@ -187,14 +189,14 @@ const portfolioData = {
         },
         {
             title: "6+ Major National Hackathons",
-            project: "TNIMPACT 2026, KPR Institute (24-hr Full-Stack), KIT (36-hr & 24-hr Coding), St. Joseph's Chennai",
+            project: "TNWISE 2025 & 2026, KPR Institute (24-hr Full-Stack), KIT (36-hr & 24-hr Coding), St. Joseph's Chennai",
             award: "Competed across 24-hr Full-Stack & 36-hr Coding Marathons",
             date: "2024-2026"
         },
         {
             title: "Competitive Streak Badges",
-            project: "CodeChef Diamond Badges & LeetCode 200-Day Streak",
-            award: "Earned Code Enthusiast, Problem Solver, Daily Streak & LeetCode 50/100/200-Day Badges",
+            project: "CodeChef Diamond, Gold & Bronze Badges • LeetCode 200-Day Streak",
+            award: "Earned CodeChef Diamond (Daily Streak), Gold (Problem Solver, Contest Contender), Bronze (Code Enthusiast) & LeetCode 50/100/200-Day Badges",
             date: "2024-2026"
         }
     ],
