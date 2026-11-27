@@ -95,6 +95,7 @@ const portfolioData = {
             type: "Team Project",
             category: "ai",
             badge: "Team Project • Voice AI & n8n",
+            image: "voice-logistic-assistant.jpg",
             description: "Built an intelligent, hands-free conversational voice assistant for logistics and delivery drivers. Enables drivers to speak commands like 'mark delivered' to update statuses automatically in Firebase or ask 'what is the next stop?' to calculate routing and display interactive live navigation maps.",
             tech: ["n8n Workflows", "Gemini Voice AI", "Firebase Firestore", "React.js", "Live Maps & GPS"],
             liveUrl: "#preview-modal",
