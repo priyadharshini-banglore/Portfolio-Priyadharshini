@@ -90,20 +90,6 @@ const portfolioData = {
 
     projects: [
         {
-            id: "voice-logistic-assistant",
-            title: "Voice Logistic Assistant",
-            type: "Team Project",
-            category: "ai",
-            badge: "Team Project • Voice AI & n8n",
-            image: "voice-logistic-assistant.jpg",
-            description: "Built an intelligent, hands-free conversational voice assistant for logistics and delivery drivers. Enables drivers to speak commands like 'mark delivered' to update statuses automatically in Firebase or ask 'what is the next stop?' to calculate routing and display interactive live navigation maps.",
-            tech: ["n8n Workflows", "Gemini Voice AI", "Firebase Firestore", "React.js", "Live Maps & GPS"],
-            liveUrl: "#preview-modal",
-            githubUrl: "https://github.com/priyadharshini-banglore",
-            featured: true,
-            previewDetails: "Engineered with automated n8n workflow event pipelines connected to Firebase real-time database and Gemini conversational voice processing. Gives drivers on the road a hands-free AI co-pilot: verbal 'mark delivered' updates order pipelines in real-time, while route queries automatically compute and render live navigation maps."
-        },
-        {
             id: "food-waste-tracker",
             title: "Online Food Waste Tracker",
             type: "Individual Project",
@@ -116,6 +102,20 @@ const portfolioData = {
             githubUrl: "https://github.com/priyadharshini-banglore/AI-RESTAURANT-MANAGEMENT-SYSTEM",
             featured: true,
             previewDetails: "Engineered end-to-end table floor mapping, QR customer ordering, live Kitchen KDS routing, GST tax invoicing with Razorpay UPI integration, and Groq/Gemini Vision AI plate-waste diagnostics to help restaurants cut food waste and streamline operations."
+        },
+        {
+            id: "voice-logistic-assistant",
+            title: "Voice Logistic Assistant",
+            type: "Team Project",
+            category: "ai",
+            badge: "Team Project • Voice AI & n8n",
+            image: "voice-logistic-assistant.jpg",
+            description: "Built an intelligent, hands-free conversational voice assistant for logistics and delivery drivers. Enables drivers to speak commands like 'mark delivered' to update statuses automatically in Firebase or ask 'what is the next stop?' to calculate routing and display interactive live navigation maps.",
+            tech: ["n8n Workflows", "Gemini Voice AI", "Firebase Firestore", "React.js", "Live Maps & GPS"],
+            liveUrl: "#preview-modal",
+            githubUrl: "https://github.com/priyadharshini-banglore",
+            featured: true,
+            previewDetails: "Engineered with automated n8n workflow event pipelines connected to Firebase real-time database and Gemini conversational voice processing. Gives drivers on the road a hands-free AI co-pilot: verbal 'mark delivered' updates order pipelines in real-time, while route queries automatically compute and render live navigation maps."
         },
         {
             id: "doctor-patient-system",
