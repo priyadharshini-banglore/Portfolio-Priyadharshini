@@ -106,13 +106,13 @@ const portfolioData = {
             title: "Online Food Waste Tracker",
             type: "Individual Project",
             category: "mern",
-            badge: "MERN Stack AI System",
-            description: "Built an AI-powered restaurant management system using the MERN stack, integrating smart menu recommendations driven by customer ordering patterns to reduce food waste and boost sales, with automated ordering workflows and real-time inventory analytics.",
-            tech: ["MongoDB", "Express.js", "React.js", "Node.js", "AI Analytics"],
-            liveUrl: "#preview-modal",
-            githubUrl: "https://github.com/priyadharshini-banglore",
+            badge: "Full-Stack AI Restaurant POS",
+            description: "Built an AI-powered restaurant management & POS platform featuring interactive 3D table ordering, Kitchen Display System (KDS), Razorpay UPI billing, smart menu recommendations, and camera-based food waste analytics.",
+            tech: ["React.js", "Node.js", "Express.js", "Vision AI", "Razorpay POS"],
+            liveUrl: "https://ai-restaurant-management-system-32up.onrender.com",
+            githubUrl: "https://github.com/priyadharshini-banglore/AI-RESTAURANT-MANAGEMENT-SYSTEM",
             featured: true,
-            previewDetails: "Engineered automated ordering workflows and a real-time analytics dashboard, giving restaurant staff data-driven insights into inventory usage and customer preferences. Designed an intuitive UI to streamline the ordering process end-to-end."
+            previewDetails: "Engineered end-to-end table floor mapping, QR customer ordering, live Kitchen KDS routing, GST tax invoicing with Razorpay UPI integration, and Groq/Gemini Vision AI plate-waste diagnostics to help restaurants cut food waste and streamline operations."
         },
         {
             id: "doctor-patient-system",

@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="project-visual-canvas">
                                 <div class="visual-live-indicator">
                                     <span class="live-green-pulse"></span>
-                                    <span>${isVoice ? 'Live Voice AI & n8n Engine' : 'Simulated Reactive Engine'}</span>
+                                    <span>${isVoice ? 'Live Voice AI & n8n Engine' : (proj.liveUrl && proj.liveUrl.startsWith('http') ? 'Live Deployed App Ready' : 'Simulated Reactive Engine')}</span>
                                 </div>
                             </div>
 
@@ -189,6 +189,12 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <span class="btn-icon-burst">🚀</span>
                             </button>
                             <div class="project-links-duo">
+                                ${proj.liveUrl && proj.liveUrl.startsWith('http') ? `
+                                <a href="${proj.liveUrl}" target="_blank" rel="noopener" class="comic-btn btn-surface btn-xs" title="Open Live Website">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Live</span>
+                                </a>
+                                ` : ''}
                                 <a href="${proj.githubUrl}" target="_blank" rel="noopener" class="comic-btn btn-surface btn-xs" title="GitHub Code">
                                     <i class="fa-brands fa-github"></i>
                                     <span>Code</span>
@@ -692,9 +698,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const githubBtn = document.getElementById("modal-github-btn");
         const simContent = document.getElementById("modal-simulation-screen");
 
+        const hasLiveSite = Boolean(proj.liveUrl && proj.liveUrl.startsWith('http'));
+
         if (titleEl) titleEl.textContent = proj.title;
         if (badgeEl) badgeEl.textContent = proj.badge;
-        if (urlEl) urlEl.textContent = `https://${proj.id}.priya-ai-systems.org`;
+        if (urlEl) urlEl.textContent = hasLiveSite ? proj.liveUrl : `https://${proj.id}.priya-ai-systems.org`;
         if (descEl) descEl.textContent = `${proj.description} \n\n${proj.previewDetails || 'Architected with full role-based access, low-latency state persistence, and modular cloud endpoints.'}`;
 
         if (tagsEl) {
@@ -703,10 +711,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (githubBtn) githubBtn.href = proj.githubUrl;
         if (liveBtn) {
-            liveBtn.onclick = (e) => {
-                e.preventDefault();
-                alert(`🚀 Interactive Sandbox simulation active for ${proj.title}! Full production demo running in test mode.`);
-            };
+            if (hasLiveSite) {
+                liveBtn.href = proj.liveUrl;
+                liveBtn.onclick = null;
+            } else {
+                liveBtn.href = '#';
+                liveBtn.onclick = (e) => {
+                    e.preventDefault();
+                    alert(`🚀 Interactive Sandbox simulation active for ${proj.title}! Full production demo running in test mode.`);
+                };
+            }
         }
 
         if (simContent) {
